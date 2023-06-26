@@ -1,80 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-
 * {
     box-sizing: border-box;
     margin: 0;
-}
+    font-family: 'Nunito', sans-serif
 
-ul {
-    list-style: none;
 }
 
 body {
     margin: auto;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #F2F2F2;
+    /*background-color: #F2F2F2;*/
+    overflow-x: hidden;
 }
 
 
-
-header {
-    background-color: #F2F2F2(240, 240, 240);
-    z-index: 20;
-    margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-header .logo {
-    margin: 0;
-    padding: 25px 30px;
-
-}
-
-header .logo img {
-    height: 100px;
-    width: 100px;
-}
-
-header nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header nav {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding-bottom: 25px;
-}
-
-header a {
-    padding: 5px 12px;
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
-}
-
-header a:hover {
-    color: rgb(165, 42, 42);
-}
-
-.center {
-    border: #F2F2F2 10px solid;
-    border-radius: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: auto;
-    float: center;
-    margin-top: -120px;
-    object-fit: cover;
-  }
-
+/* Formato de Título principal*/
 
 #page_title {
     z-index: 19;
@@ -83,37 +21,66 @@ header a:hover {
     text-align: center;
     font-size: 2.5rem;
     font-weight: bold;
-    background-color: rgb(27, 140, 166);
+    background-image: linear-gradient(to bottom, #1B8CA6, #02734A);;
     border-bottom: #02734A solid 10px;
+    float:center;
+  }
+  
+  /* Imagen principal de la página */
+  
+  .center {
+    border: #F2F2F2 10px solid;
+    border-radius: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: auto;
     float: center;
-}
+    margin-top: -120px;
+    margin-bottom: 0px;
+    object-fit: cover;
+  }
 
 
-.line{
+/*.line {
     margin-top: 5%;
     width: 90%;
-    margin-left:  5%;
+    margin-left: 5%;
     height: 5px;
     background-color: #02734A;
     margin-bottom: 0;
 }
 
-.texto {
+/*.texto {
     margin-top: 25px;
     width: 90%;
     margin-bottom: 25px;
     margin-left: auto;
     margin-right: auto;
     float: center;
+    text-align: justify;
+    font-size: medium;
+    color: #25383C;
 
+}*/
+
+.texto {
+    width: 50%;
+    position: relative;
+    top: -150px;
+    left: 25%;
+    z-index: 20;
+    /*border-radius: 20px;*/
+    text-align: center;
+    color: #F2F2F2;
 }
-
-.texto + section{
+/*.texto {
     margin-top: 25px;
     margin-bottom: 10%;
-}
+}*/
 
-#misionVision {
+/*#misionVision {
     display: flex;
     margin-top: 75px;
     margin-left: 0;
@@ -132,279 +99,125 @@ header a:hover {
 
 }
 
-#misionVision article p{
+#misionVision article p {
     padding: 1rem 2rem;
-
+    color:#02734A;
 
 }
 
+/*Acordeón*/
 
-#uno {
-    background-color: #1B8CA6;
-    
+.accordion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-gap: 10px;
+    max-width: 80%;
+    margin: 0 auto;
 }
-    
-#dos {
-    background-color: #02734A;
-}
-    
 
-#misionVision h4 {
+.panel {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+
+}
+
+.panel-header {
+    background-image: linear-gradient(to right, #1B8CA6, #038C5A);
+    color: white;
+    padding: 15px;
     text-align: center;
-    padding: 1rem 2rem 0 2rem;
 }
 
-.listaMetas{
-    margin: 5% 10%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #1BA1BF;
+.panel-content {
+    padding: 2%;
+    margin: 2%;
+    line-height: 1.5;
+    text-align: justify;
+    color: #25383C; 
 }
 
-.listaMetas ul{
-    width: 50%;
-    list-style: decimal;
-    color: #F2F2F2;
+#panel-1{
+    grid-row: 1;
+    grid-column: 1;
+  }
+  
+#panel-2 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  
+#panel-3 {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+  }
+
+.metas {
+    color:#25383C;
+    ;
 }
 
-.listaMetas li{
+/*@keyframes cambiaColor {
+    0% {
+        background-color: #038C5A;
+    }
 
-    margin: 1rem;
-}
+    50% {
+        background-color: #1B8CA6;
+    }
 
-.listaMetas h4{
-    text-align: center;
-
-
-}
-
-footer {
-    z-index: 0;
-    padding-top: 25px;
-    background-color: #1B8CA6;
-    border-top: #02734A solid 10px;
-    height: 250px;
-    color: #F2F2F2;
-
-}
-
-
-#footer_info {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-}
-
-footer section {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-footer section p {
-
-    margin: 0;
-}
-
-footer nav {
-
-    display: flex;
-    justify-content: space-evenly;
-    /*font-weight: bold;
-    color: black;
-    font-size: 1.40em;*/
-
-}
-
-#footer_links {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-}
-
-footer section ul {
-    padding: 0;
-}
-
-
-footer nav a {
-
-    text-decoration: none;
-    color: #F2F2F2;
-}
-
-footer nav a .rrss {
-    margin-top: 25px;
-}
-
-i {
-
-    font-size: 1.5rem;
-}
-
-footer nav a:hover {
-    color: brown
-}
-
-footer nav a:focus {
-    color: brown
-}
-
-
-
-#copyright {
-    margin-top: 20px;
-    text-align: center;
-
-}
-
+    100% {
+        background-color: #038C5A;
+    }
+}*/
 
 
 .tag {
-  opacity: 0;
-  transform: translate(-10vh, 0);
-  transition: all 2.25s;
+    opacity: 0;
+    transform: translate(-10vh, 0);
+    transition: all 2.25s;
 }
-
-
 
 .tag.visible {
-  opacity: 1;
-  transform: translate(0, 0);
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
-
-@media (min-width: 900px) {
-
-
-    #misionVision {
-        display: flex;
-        margin-top: 75px;
-        margin-left: 5%;
-        margin-right: 5%;
-        justify-content: space-around;
-        flex-direction: row;
-        margin-bottom: 75px;
-    }
+@media (max-width: 720px) {
     
-    #misionVision article {
-        width: 35%;border-radius: 25px;
-        border-radius: 25px;
-    
+    .accordion {
+      grid-template-columns: 1fr;
+      grid-template-rows: 3; 
     }
-    
-    #misionVision article p{
-        padding: 1rem 2rem;
+  
+    #panel-1 {
+      grid-row: 1;
+      grid-column: 1;
     }
-    
-    
-    #uno {
-        background-color: #1B8CA6;
+  
+    #panel-2{
+      grid-row: 2;
+      grid-column: 1;
     }
-        
-    #dos {
-        background-color: #02734A;
+  
+    #panel-3 {
+      grid-row: 3;
+      grid-column: 1;
     }
-        
-    
-    #misionVision h4 {
-        text-align: center;
-        padding: 1rem 2rem 0 2rem;
-    }
-
-
-
-
-
-
-}
-
-
-
-@media (min-width: 720px) {
-
-    .line{
-        margin-top: 5%;
-        width: 50%;
-        margin-left:  25%;
-        height: 5px;
-        background-color: #02734A;
-        margin-bottom: 0;
-    }
+  }
+  
+@media (max-width: 1100px) {
 
     .texto {
-        margin-top: 25px;
         width: 50%;
-        margin-bottom: 25px;
-        margin-left: auto;
-        margin-right: auto;
-        float: center;
+        position: relative;
+        top: 0px;
+        left: 25%;
+        z-index: 20;
+        text-align: justify;
+        color: #1B8CA6;
+        padding-bottom: 10px;
     }
-    
-    .texto + section{
-        margin-top: 25px;
-        margin-bottom: 5%;
-    }
-
-    header {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    header nav {
-        flex-direction: row;
-        padding-bottom: 0;
-        padding-right: 20px;
-    }
-
-
 }
-
-@media screen and (min-width:424px) {
-    header ul {
-        column-gap: 1rem;
-
-    }
-
-    #footer_info {
-        flex-direction: row;
-    }
-
-}
-
-
-
-
-
-
-
-
-
-/*
-
-Colores nuevos
-
-
-Azul Claro
-#1BA1BF
-
-Azul Oscuro
-#1B8CA6
-
-Verde
-#038C5A
-
-Verde Mas oscuro
-#02734A
-
-Blanco
-#F2F2F2
-
-
-*/

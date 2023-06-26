@@ -7,114 +7,164 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Capacitación a distancia</title>
   <link rel="stylesheet" href="./styles/capacitacion.css">
+  <link rel="stylesheet" href="./styles/header-resp.css">
+  <link rel="stylesheet" href="./styles/footer.css">
+  <link rel="icon" type="image/x-icon" href="./img/progranos-cuadrado-transp.png">
   <link rel="icon" type="image/x-icon" href="./img/progranos-cuadrado-transp.png">
   <script src="https://kit.fontawesome.com/3e40217e48.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-  <header>
+  
+<header> <!--Header responsive con hamburguesa-->
+    <nav class="nav">
+        <input type="checkbox" name="" id="nav__checkbox" class="nav__checkbox" />
+        <label for="nav__checkbox" class="nav__toggle">
+            <!-- Menu -->
+            <svg class="menu" viewBox="0 0 448 512" width="100" title="bars">
+                <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+            </svg>
+    
+            <!-- Close -->
+            <svg class="close" viewBox="0 0 384 512" width="100" title="times">
+                <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+            </svg>
+        </label>
+    
+        <ul class="nav__menu">
+            <li class="menu__logo">
+              <a id="logo-progranos" href="./index.html"><img src="./img/progranos-cuadrado-transp.png" alt=""></a>
+              <a id="logo-inta" href="www.inta.gob.ar"><img src="./img/logo-inta-chico.jpg" alt=""></a>
+            </li>
+
+            <li><a class= "nav_link" href="index.html">Home</a></li>
+            <li><a class= "nav_link" href="plantapiloto.html">Planta piloto</a></li>
+            <li><a class= "nav_link" href="capacitacion.html">Capacitación a distancia</a></li>
+            <li><a class= "nav_link" href= "misionyvision.html">Misión y visión</a></li>
+            <li><a class= "nav_link" href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+  <!--<header anterior>
+    
     <section class="logo">
-      <img src="./img/progranos-cuadrado-transp.png" alt="">
+      <a id="logo-progranos" href="./index.html"><img src="./img/progranos-cuadrado-transp.png" alt=""></a>
+      <a id="logo-inta" href="./index.html"><img src="./img/logo-inta-chico.jpg" alt=""></a>
     </section>
 
     <nav id="navHeader">
       <a href="./index.html">Home</a>
       <a href="./plantapiloto.html">Planta Piloto</a>
       <a href="./capacitacion.html">Capacitación a distancia</a>
+      <a href="./misionyvision.html">Misión y Visión</a>
       <a href="./contacto.html">Contacto</a>
     </nav>
-  </header>
+
+  </header>-->
 
   <main>
 
     <h1 id="page_title">Capacitación a distancia</h1>
-      <img class="center" src="./img/online-learning.webp" alt="online-learning">
-  
+    <!--<img class="center" src="./img/laptop.jpg" alt="online-learning">-->
+
     <h2 id="h2">Catálogo de cursos</h2>
-  
-      <section class="flex-container">
-        
-        <a id="link" href="./docs/intro-posco.pdf", target="_blank">
+
+    <section class="flex-container">
+
+      <a id="link" href="./docs/intro-posco.pdf" , target="_blank">
         <article class="card">
           <article class="ribbon-container">
             <span id="ribbon-finalizado">Finalizado</span>
           </article>
           <img src="./img/introposco.png" alt="Intro a la poscosecha">
-          <h5 id="h5">Introducción a la poscosecha</h5></a>
-        </article>
-        
-      
-        <a id="link" href="./docs/aireacion.pdf", target="_blank">
+          <h5 id="h5">Introducción a la poscosecha</h5>
+      </a>
+      </article>
+
+
+      <a id="link" href="./docs/aireacion.pdf" , target="_blank">
         <article class="card">
           <article class="ribbon-container">
             <span id="ribbon-abierto">Inicio: abril '23</span>
           </article>
           <img src="./img/aireacion.png" alt="Aireación">
-          <h5>Aireación de granos</h5></a>
-          </article>
-        
-        <a id="link" href="./docs/insectos.pdf", target="_blank">
+          <h5>Aireación de granos</h5>
+      </a>
+      </article>
+
+      <a id="link" href="./docs/insectos.pdf" , target="_blank">
         <article class="card">
           <article class="ribbon-container">
             <span id="ribbon-abierto">Inicio: mayo '23</span>
           </article>
           <img src="./img/insectos.png" alt="Control de plagas">
-          <h5>Control de plagas e inocuidad</h5></a>
-        </article>
-  
-        <a id="link" href="./docs/semillas.pdf", target="_blank">
+          <h5>Control de plagas e inocuidad</h5>
+      </a>
+      </article>
+
+      <a id="link" href="./docs/semillas.pdf" , target="_blank">
         <article class="card">
           <article class="ribbon-container">
             <span id="ribbon-abierto">Inicio: agosto '23</span>
           </article>
           <img src="./img/semillas.png" alt="Poscosecha de semillas">
-          <h5>Poscosecha de semillas</h5></a>
-        </article>
-  
-        <a id="link" href="#">
+          <h5>Poscosecha de semillas</h5>
+      </a>
+      </article>
+
+      <a id="link" href="#">
         <article class="card">
           <article class="ribbon-container">
             <span id="ribbon-abierto">Inicio: agosto '23</span>
           </article>
           <img src="./img/silobolsa.png" alt="Almacenamiento en silobolsa">
-          <h5>Almacenamiento en silobolsa</h5></a>
-        </article>
-  
-      </section>
-  
-      <section>
-        
-        <a id="link" href="https://docs.google.com/forms/d/e/1FAIpQLSc59qXXC__Ps3AUTJRB6ua6wPD-F7_1JB_X5bW9BnZS1_tk8w/viewform", target="_blank"><button id="boton-inscripcion">Quiero inscribirme!</button></a>
-  
-      </section>
-  
+          <h5>Almacenamiento en silobolsa</h5>
+      </a>
+      </article>
+
+    </section>
+
     <section>
-  
-    <h2 id="h2">Preguntas frecuentes</h2>
-        
+
+      <a id="link"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSc59qXXC__Ps3AUTJRB6ua6wPD-F7_1JB_X5bW9BnZS1_tk8w/viewform" ,
+        target="_blank"><button id="boton-inscripcion">Quiero inscribirme!</button></a>
+
+    </section>
+
+    <section>
+
+      <h2 id="h2">Preguntas frecuentes</h2>
+
       <section class="accordion">
-        
+
         <article class="panel">
           <article class="panel-header">¿A quiénes están dirigidos los cursos?</article>
           <article class="panel-content">
-            <p>Profesionales, estudiantes de ciencias agrarias, alimentos y afines, y personal relacionado al manejo de granos en plantas de acopio.</p>
+            <p>Profesionales, estudiantes de ciencias agrarias, alimentos y afines, y personal relacionado al manejo de
+              granos en plantas de acopio.</p>
           </article>
         </article>
-        
+
         <article class="panel">
           <article class="panel-header">¿Cómo es la modalidad?</article>
           <article class="panel-content">
-            <p>A distancia y asincrónica. Los alumnos ven las clases teóricas y realizan las actividades a través de una plataforma virtual, en el momento de su conveniencia.</p>
+            <p>A distancia y asincrónica. Los alumnos ven las clases teóricas y realizan las actividades a través de una
+              plataforma virtual, en el momento de su conveniencia.</p>
           </article>
         </article>
-  
+
         <article class="panel">
           <article class="panel-header">¿Cuánto tiempo me demandará el curso?</article>
           <article class="panel-content">
             <p>Aproximadamente de 4 a 6 horas semanales tomando como referencia 2 clases a la semana.</p>
           </article>
         </article>
-  
+
         <article class="panel">
           <article class="panel-header">¿Cuáles son los requisitos para aprobar?</article>
           <article class="panel-content">
@@ -122,14 +172,14 @@
               actividades prácticas. Se entrega un diploma de aprobación del curso.</p>
           </article>
         </article>
-        
+
         <article class="panel">
           <article class="panel-header">¿Cuál es el arancel?</article>
           <article class="panel-content">
             <p>El valor de la inscripción depende de cada curso.</p>
           </article>
         </article>
-        
+
         <article class="panel">
           <article class="panel-header">¿Qué necesito para el curso?</article>
           <article class="panel-content">
@@ -147,50 +197,56 @@
         <article class="panel">
           <article class="panel-header">Tengo más dudas!</article>
           <article class="panel-content">
-            <p>Haciendo click en cada curso accedés a información más detallada. Si necesitás más información, escribínos en el formulario de contacto.</p>
+            <p>Haciendo click en cada curso accedés a información más detallada. Si necesitás más información,
+              escribínos en el formulario de contacto.</p>
           </article>
         </article>
 
-
-  
       </section>
-  
-    </main>
+
+  </main>
+
+
   <footer>
 
     <section id="footer_info">
       <nav id="footer_links">
-        <h5>Links Rápidos</h5>
+        <h4>Links Rápidos</h4>
         <a class="linkFoo" href="./index.html">Home</a>
         <a class="linkFoo" href="./plantapiloto.html">Planta Piloto</a>
         <a class="linkFoo" href="./capacitacion.html">Capacitación a distancia</a>
-        <a class="linkFoo" href="#">Contacto</a>
+        <a class="linkFoo" href="./contacto.html">Contacto</a>
+        <a class="linkFoo" href="./misionyvision.html">Visión y Misión</a>
         <a class="linkFoo" href="www.inta.gob.ar">INTA</a>
       </nav>
 
 
       <section>
-        <h5>Contáctanos</h5>
+        <h4>Contactános</h4>
         <ul>
-          <li>Ruta 226, km 73,5. Balcarce</li>
+          <li>Ruta 226, km 73,5, Balcarce</li>
           <li>Buenos Aires, Argentina</li>
           <li>02266 43-9100</li>
         </ul>
         <nav class="rrss">
-          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-          <a href="#"><i class="fa-solid fa-envelope"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a  target="_blank" href="https://www.facebook.com/poscosechadegranos/"><i id="iFacebook" class="fa-brands fa-square-facebook"></i></a>
+          <a target="_blank" href="./contacto.html"><i id="iMail" class="fa-solid fa-envelope"></i></a>
+          <a target="_blank" href="https://ar.linkedin.com/in/grupo-de-poscosecha-de-granos-inta-190b63173"><i id="iLinkedin" class="fa-brands fa-linkedin"></i></a>
         </nav>
       </section>
     </section>
 
     <section id="copyright">
       <p>2023 - Todos los Derechos Reservados. Las marcas y logos de INTA.</p>
+      <div id="app">
+      <p>En {{localidad}}, {{pais}}, hoy es {{dia}}/{{mes}}/{{anio}} y la hora es {{hora}}.</p>
+    </div>
     </section>
 
   </footer>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./js/conApiCalen.js"></script>
 </body>
 
 
 </html>
-

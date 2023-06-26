@@ -1,0 +1,119 @@
+/*        Footer            */
+
+footer {
+    z-index: 0;
+    margin-top: 3rem;
+    padding-top: 25px;
+    background-color: #1B8CA6;
+    border-top: #02734A solid 10px;
+    height: 375px;
+    color: #f2f2f2;
+}
+
+/*footer{
+    margin-top: 50px;
+    height: 250px;
+  }*/
+
+#footer_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2%;
+}
+
+footer section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer section p {
+    margin: 0;
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-evenly;
+    /*font-weight: bold;
+    color: black;
+    font-size: 1.40em;*/
+}
+
+#footer_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+.linkFoo {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+footer section ul {
+    padding-left: 0;
+    padding-bottom: 20px;
+    list-style: none;
+}
+
+/*footer nav a{
+    text-decoration: none;
+    color: black;
+  }*/
+
+footer nav a .rrss {
+    margin-top: 2rem;
+}
+
+
+
+
+i {
+    font-size: 1.5rem;
+    color: #f2f2f2;
+}
+
+#iFacebook:hover{
+    color: #4267B2
+}
+
+#iMail:hover{
+    color: #02734A
+}
+
+#iLinkedin:hover{
+    color: #0e76a8
+}
+
+footer nav a:hover {
+    color: #02734A;
+    text-decoration: underline;
+
+}
+
+footer nav a:focus {
+    color: #02734A;
+}
+
+#copyright p {
+    margin-top: 20px;
+    text-align: center;
+    color: #f2f2f2;
+    padding: 0;
+
+}
+
+
+@media screen and (min-width:424px) {
+
+
+ 
+
+    #footer_info {
+      flex-direction: row;
+    }
+  
+  }
