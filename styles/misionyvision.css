@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    margin: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #F2F2F2;
+}
+
+
+
+header {
+    background-color: #F2F2F2(240, 240, 240);
+    z-index: 20;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+header .logo {
+    margin: 0;
+    padding: 25px 30px;
+
+}
+
+header .logo img {
+    height: 100px;
+    width: 100px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover {
+    color: rgb(165, 42, 42);
+}
+
+.center {
+    border: #F2F2F2 10px solid;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+    float: center;
+    margin-top: -120px;
+    object-fit: cover;
+  }
+
+
+#page_title {
+    z-index: 19;
+    color: #F2F2F2;
+    padding: 70px 15px 150px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-color: rgb(27, 140, 166);
+    border-bottom: #02734A solid 10px;
+    float: center;
+}
+
+
+.line{
+    margin-top: 5%;
+    width: 90%;
+    margin-left:  5%;
+    height: 5px;
+    background-color: #02734A;
+    margin-bottom: 0;
+}
+
+.texto {
+    margin-top: 25px;
+    width: 90%;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    float: center;
+
+}
+
+.texto + section{
+    margin-top: 25px;
+    margin-bottom: 10%;
+}
+
+#misionVision {
+    display: flex;
+    margin-top: 75px;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-bottom: 75px;
+    flex-wrap: wrap;
+}
+
+#misionVision article {
+    width: 45%;
+    border-radius: 25px;
+    min-width: 300px;
+    margin-top: 25px;
+
+}
+
+#misionVision article p{
+    padding: 1rem 2rem;
+
+
+}
+
+
+#uno {
+    background-color: #1B8CA6;
+    
+}
+    
+#dos {
+    background-color: #02734A;
+}
+    
+
+#misionVision h4 {
+    text-align: center;
+    padding: 1rem 2rem 0 2rem;
+}
+
+.listaMetas{
+    margin: 5% 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1BA1BF;
+}
+
+.listaMetas ul{
+    width: 50%;
+    list-style: decimal;
+    color: #F2F2F2;
+}
+
+.listaMetas li{
+
+    margin: 1rem;
+}
+
+.listaMetas h4{
+    text-align: center;
+
+
+}
+
+footer {
+    z-index: 0;
+    padding-top: 25px;
+    background-color: #1B8CA6;
+    border-top: #02734A solid 10px;
+    height: 250px;
+    color: #F2F2F2;
+
+}
+
+
+#footer_info {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+footer section {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer section p {
+
+    margin: 0;
+}
+
+footer nav {
+
+    display: flex;
+    justify-content: space-evenly;
+    /*font-weight: bold;
+    color: black;
+    font-size: 1.40em;*/
+
+}
+
+#footer_links {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+footer section ul {
+    padding: 0;
+}
+
+
+footer nav a {
+
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+footer nav a .rrss {
+    margin-top: 25px;
+}
+
+i {
+
+    font-size: 1.5rem;
+}
+
+footer nav a:hover {
+    color: brown
+}
+
+footer nav a:focus {
+    color: brown
+}
+
+
+
+#copyright {
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+
+
+.tag {
+  opacity: 0;
+  transform: translate(-10vh, 0);
+  transition: all 2.25s;
+}
+
+
+
+.tag.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+
+@media (min-width: 900px) {
+
+
+    #misionVision {
+        display: flex;
+        margin-top: 75px;
+        margin-left: 5%;
+        margin-right: 5%;
+        justify-content: space-around;
+        flex-direction: row;
+        margin-bottom: 75px;
+    }
+    
+    #misionVision article {
+        width: 35%;border-radius: 25px;
+        border-radius: 25px;
+    
+    }
+    
+    #misionVision article p{
+        padding: 1rem 2rem;
+    }
+    
+    
+    #uno {
+        background-color: #1B8CA6;
+    }
+        
+    #dos {
+        background-color: #02734A;
+    }
+        
+    
+    #misionVision h4 {
+        text-align: center;
+        padding: 1rem 2rem 0 2rem;
+    }
+
+
+
+
+
+
+}
+
+
+
+@media (min-width: 720px) {
+
+    .line{
+        margin-top: 5%;
+        width: 50%;
+        margin-left:  25%;
+        height: 5px;
+        background-color: #02734A;
+        margin-bottom: 0;
+    }
+
+    .texto {
+        margin-top: 25px;
+        width: 50%;
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        float: center;
+    }
+    
+    .texto + section{
+        margin-top: 25px;
+        margin-bottom: 5%;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+
+}
+
+@media screen and (min-width:424px) {
+    header ul {
+        column-gap: 1rem;
+
+    }
+
+    #footer_info {
+        flex-direction: row;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/*
+
+Colores nuevos
+
+
+Azul Claro
+#1BA1BF
+
+Azul Oscuro
+#1B8CA6
+
+Verde
+#038C5A
+
+Verde Mas oscuro
+#02734A
+
+Blanco
+#F2F2F2
+
+
+*/

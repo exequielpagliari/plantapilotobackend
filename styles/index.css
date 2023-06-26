@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+    /*Márgenes de Página y método de Organización del Tamaño
+    de las cajas*/
+}
+
+ul {
+    list-style: none;
+
+    /* Todos los ul sin estilo */
+}
+
+body {
+
+    margin: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #F2F2F2;
+
+
+}
+
+
+
+/*Barra de navegación*/
+
+header {
+    background-color: white;
+    z-index: 20;
+
+
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-around;
+    width: 100%;
+    height: 250px;
+}
+
+header .logo {
+
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo img {
+    height: 100px;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+
+}
+
+#navHeader {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    padding-bottom: 0px;
+    margin: 0;
+}
+
+#navHeader a {
+    height: 34px;
+    padding: 5px 12px;
+    margin-bottom: 0px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1B8CA6;
+
+}
+
+
+header a:hover {
+    /*background-color: #038C5A;*/
+    color: #038C5A;
+    text-decoration: underline;
+}
+
+
+main {
+    margin-top: 0%;
+
+}
+
+
+#page_title {
+    z-index: 19;
+    color: #F2F2F2;
+    padding: 70px 15px 150px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, #1B8CA6, #02734A);
+    border-bottom: #02734A solid 10px;
+    float: center;
+}
+
+
+#carousel {
+    margin-top: -120px;
+    border: #F2F2F2 10px solid;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    float: center;
+
+
+
+}
+
+
+
+div a {
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+.slide img {
+    height: 80vh;
+    width: auto;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(165, 42, 42, 0.5) !important;
+    border-radius: 5px;
+}
+
+.carousel-caption p {
+    text-align: center;
+}
+
+div h5 {
+    text-align: center;
+    -webkit-text-stroke: .2px black;
+}
+
+div p {
+    text-align: center;
+    -webkit-text-stroke: .2px black;
+}
+
+.grande {
+    display: flex;
+
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+
+    height: 100%;
+    width: 500%;
+
+
+    color: #F2F2F2(255, 255, 255);
+    background-image: linear-gradient(0deg,
+            rgba(121, 0, 0, 0.5),
+            rgba(55, 1, 1, 0.5));
+
+
+    /*,url(../img/planmta-piloto-head.jpg);*/
+    transform: translateX(-20%);
+    transition: all
+}
+
+.carrusel img {
+    width: calc(100% / 5);
+    object-fit: scale-down;
+    height: auto;
+
+
+}
+
+
+#quienessomos {
+    background-color: #F2F2F2(240, 240, 240);
+
+}
+
+#quienessomos .container {
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#contactar .container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+footer {
+    z-index: 0;
+    padding-top: 25px;
+    background-color: #1B8CA6;
+    border-top: #02734A solid 10px;
+    height: 250px;
+    color: #F2F2F2;
+
+}
+
+
+#footer_info {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+footer section {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer section p {
+
+    margin: 0;
+}
+
+footer nav {
+
+    display: flex;
+    justify-content: space-evenly;
+    /*font-weight: bold;
+    color: black;
+    font-size: 1.40em;*/
+
+}
+
+#footer_links {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+footer section ul {
+    padding: 0;
+}
+
+
+footer nav a {
+
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+footer nav a .rrss {
+    margin-top: 25px;
+}
+
+i {
+
+    font-size: 1.5rem;
+}
+
+footer nav a:hover {
+    color: brown
+}
+
+footer nav a:focus {
+    color: brown
+}
+
+
+
+#copyright {
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+
+
+/* Ajuste de Pantalla menor a 720px */
+
+@media (min-width: 720px) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+        height: 160px;
+        margin-top: 0px;
+    }
+
+    #navHeader {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+
+    #navHeader a {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        margin-bottom: 3px;
+        padding-bottom: 0px;
+
+    }
+
+}
+
+/* Ajuste de pantalla a menor 424px de ancho */
+
+@media screen and (min-width:424px) {
+
+
+
+    header ul {
+        column-gap: 1rem;
+
+    }
+
+    #footer_info {
+        flex-direction: row;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/*
+
+Colores nuevos
+
+
+Azul Claro
+#1BA1BF
+
+Azul Oscuro
+#1B8CA6
+
+Verde
+#038C5A
+
+Verde Mas oscuro
+#02734A
+
+Blanco
+#F2F2F2
+
+
+*/

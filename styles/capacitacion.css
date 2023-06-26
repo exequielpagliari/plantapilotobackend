@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+}
+
+
+
+/*Barra de navegación*/
+
+header {
+  background-color: white;
+  z-index: 20;
+
+
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-around;
+  width: 100%;
+  height: 250px;
+}
+
+header .logo {
+
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+header .logo img {
+  height: 100px;
+  width: 100px;
+
+}
+
+#navHeader {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  padding-bottom: 0px;
+}
+
+#navHeader a {
+  height: 34px;
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #1B8CA6;
+
+}
+
+
+header a:hover {
+  /*background-color: #038C5A;*/
+  color: #038C5A;
+  text-decoration: underline;
+}
+
+/* Formato de Título principal*/
+
+#page_title {
+  z-index: 19;
+  color: #F2F2F2;
+  padding: 70px 15px 150px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background-image: linear-gradient(to bottom, #1B8CA6, #02734A);
+  ;
+  border-bottom: #02734A solid 10px;
+  float: center;
+}
+
+/* Imagen principal de la página */
+
+.center {
+  border: #F2F2F2 10px solid;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  width: 50%;
+  height: auto;
+  float: center;
+  margin-top: -120px;
+  object-fit: cover;
+}
+
+/* Formato de Títulos secundarios y párrafos*/
+
+h2 {
+  color: rgb(2 115 74);
+  /*me parece que algo de bootstrap impide que los h2 se muestren en verde*/
+  padding: 5rem 1rem 1rem 1rem;
+  text-align: center;
+}
+
+/*h3 {   --no tengo h3--
+  color: #02734A;
+  padding: 2rem 1rem;
+  text-align: center;
+}*/
+
+p {
+  color: #242527;
+  padding: 1rem 2rem;
+  text-align: justify;
+  font-size: medium;
+}
+
+/*Sección "Catálogo de Cursos"*/
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1rem 3rem;
+}
+
+/* Diseño de cards individuales*/
+
+.card {
+  background-color: #f1f1f1;
+  width: calc(20% - 20px);
+  margin: 10px auto;
+  padding: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card img {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card h5 {
+  color: white;
+  padding: 0.5rem;
+  color: #1B8CA6;
+  text-align: center;
+
+}
+
+/*.card p { --Ponerlo en un ribbon--
+    color: #242527;
+    padding: 0 0 0.5rem 0.5rem;
+    align-content: end;
+    margin:0;
+  }*/
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  /*media query para vista en celular*/
+  .card {
+    width: 100%;
+  }
+}
+
+/*@media (min-width: 768px) {/*media query para vista en tablet y pc - es redundante con lo especificado en .card??
+  .card {
+    width: calc(20% - 10px);
+  }
+}*/
+
+/*Botón de inscricpción*/
+
+.boton-inscripcion {
+  display: block;
+  /* Mostrar como bloque */
+  margin: 2rem auto;
+  /* Establecer margen automático en los lados */
+  background-color: #038C5A;
+  /* Color de fondo */
+  border: none;
+  /* Borde sin estilo */
+  border-radius: 0.5rem;
+  color: white;
+  /* Color del texto */
+  padding: 15px 32px;
+  /* Espaciado alrededor del texto */
+  text-align: center;
+  /* Centrar el texto */
+  text-decoration: none;
+  /* Quitar subrayado del texto */
+  font-size: 20px;
+  /* Tamaño de fuente */
+  cursor: pointer;
+  /* Cambiar el cursor al pasar por encima */
+}
+
+/*Ribbons*/
+
+.ribbon-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+}
+
+#ribbon-finalizado {
+  position: absolute;
+  top: 15px;
+  left: -30px;
+  background-color: #f00;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 40px;
+  transform: rotate(-40deg);
+  z-index: 1;
+}
+
+#ribbon-abierto {
+  position: absolute;
+  top: 20px;
+  left: -40px;
+  background-color: yellow;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 5px 40px;
+  transform: rotate(-40deg);
+  z-index: 1;
+}
+
+/*Acordeón*/
+
+.accordion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.panel {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.panel-header {
+  background-image: linear-gradient(to right, #1B8CA6, #038C5A);
+  color: white;
+  padding: 15px;
+  font-size: 1.2em;
+}
+
+.panel-content {
+  padding: 0px;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+
+  /*para vista del acordeón en celular*/
+  .accordion {
+    max-width: 90%;
+  }
+
+  .accordion {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*        Footer            */
+
+
+
+footer {
+  margin-top: 50px;
+  height: 250px;
+
+}
+
+
+#footer_info {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+footer section {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+footer section p {
+
+  margin: 0;
+}
+
+
+
+footer nav {
+
+  display: flex;
+  justify-content: space-evenly;
+  /*font-weight: bold;
+  color: black;
+  font-size: 1.40em;*/
+
+}
+
+#footer_links {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+
+footer section ul {
+  padding: 0;
+  list-style: none;
+}
+
+
+
+footer nav a {
+
+  text-decoration: none;
+  color: black;
+}
+
+footer nav a .rrss {
+  margin-top: 25px;
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+footer nav a:hover {
+  color: brown
+}
+
+footer nav a:focus {
+  color: brown
+}
+
+
+
+#copyright p {
+  margin-top: 20px;
+  text-align: center;
+
+}
+
+
+/* Ajuste de Pantalla menor a 720px */
+
+@media (min-width: 720px) {
+
+  header {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 160px;
+    margin-top: 0px;
+  }
+
+  #navHeader {
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 20px;
+  }
+
+
+  #navHeader a {
+    
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+
+  }
+
+}
+
+/* Ajuste de pantalla a menor 424px de ancho */
+
+@media screen and (min-width:424px) {
+
+
+
+  header ul {
+    column-gap: 1rem;
+
+  }
+
+  #footer_info {
+    flex-direction: row;
+  }
+
+}
