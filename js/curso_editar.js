@@ -8,9 +8,11 @@ createApp({
             id: 0,
             nombre: "",
             imagen: "",
-            stock: 0,
-            precio: 0,
-            url: 'http://localhost:5000/productos/' + id,
+            link: "",
+            fechaInicio: "",
+            fechaFinalizacion: "",
+            estado: "",
+            url: 'https://abadiaberna.pythonanywhere.com/cursos/' + id,
         }
     },
     methods: {
@@ -22,8 +24,10 @@ createApp({
                     this.id = data.id
                     this.nombre = data.nombre;
                     this.imagen = data.imagen
-                    this.stock = data.stock
-                    this.precio = data.precio
+                    this.fechaInicio = data.fechaInicio
+                    this.fechaFinalizacion = data.fechaFinalizacion
+                    this.estado = data.estado
+                    this.link = data.link
                 })
                 .catch(err => {
                     console.error(err);
@@ -31,14 +35,18 @@ createApp({
                 })
         },
         modificar() {
-            let producto = {
+            let curso = {
                 nombre: this.nombre,
                 precio: this.precio,
-                stock: this.stock,
-                imagen: this.imagen
+                link: this.link,
+                imagen: this.imagen,
+                fechaInicio: this.fechaFinalizacion,
+                fechaFinalizacion: this.fechaFinalizacion,
+                estado: this.estado
+
             }
             var options = {
-                body: JSON.stringify(producto),
+                body: JSON.stringify(curso),
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 redirect: 'follow'
@@ -46,7 +54,7 @@ createApp({
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro modificado")
-                    window.location.href = "./productos.html";
+                    window.location.href = "./cursos.html";
                 })
                 .catch(err => {
                     console.error(err);
@@ -57,4 +65,4 @@ createApp({
     created() {
         this.fetchData(this.url)
     },
-}).mount('#app')
+}).mount('#app1')

@@ -1,4 +1,4 @@
-<<!doctype html>
+<!doctype html>
     <html lang="en">
 
     <head>
@@ -15,10 +15,10 @@
             <!-- place navbar here -->
         </header>
         <main>
-            <div class="container" id="app">
+            <div class="container" id="app1">
                 <form style="background-color: aliceblue;margin:10px auto ; width: 400px; padding: 20px;">
-                    <h2>Editar Producto </h2>
-                    <p>Precio:{{precio}}</p>
+                    <h2>Editar Curso </h2>
+                    <p>Curso:{{nombre}}</p>
                     <div class="mb-3">
                         <label for="id">Id</label>
                         <input type="number" name="id" id="id" disabled v-model="id">
@@ -28,17 +28,25 @@
                         <input type="text" name="nombre" id="nombre" v-model="nombre">
                     </div>
                     <div class="mb-3">
-                        <label for="precio">Precio</label>
-                        <input type="number" name="precio" id="precio" v-model="precio">
+                        <label for="link">Link </label>
+                        <input type="text" name="link" id="link" v-model="link">
                     </div>
                     <div class="mb-3">
-                        <label for="stock">Stock</label>
-                        <input type="number" name="stock" id="stock" v-model="stock">
+                        <label for="stock">Fecha de Inicio</label>
+                        <input type="text" name="fechaInicio" id="fechaInicio" v-model="fechaInicio">
+                    </div>
+                    <div class="mb-3">
+                        <label for="stock">Fecha de Finalización</label>
+                        <input type="text" name="fechaFinalizacion" id="fechaFinalizacion" v-model="fechaFinalizacion">
+                    </div>
+                    <div class="mb-3">
+                        <label for="stock">Estado</label>
+                        <input type="text" name="estado" id="estado" v-model="estado">
                     </div>
                     <div class="mb-3">
                         <label for="imagen">Imagen</label>
                         <input type="text" name="imagen" id="imagen" v-model="imagen">
-                        <img width="100" :src="imagen" alt="">
+                        <img width="100" :src="'./img/' + imagen" alt="">
                     </div>
                     <button type="button" class="btn btn-success" v-on:click="modificar()">Grabar</button>
                 </form>
@@ -56,7 +64,7 @@
             crossorigin="anonymous"> </script>
         <script src="./js/main.js"></script>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-        <script src="./js/producto_editar.js"></script>
+        <script src="./js/curso_editar.js"></script>
     </body>
 
     </html>

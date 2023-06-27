@@ -59,10 +59,12 @@ const app1 = Vue.createApp({
             }
             fetch(this.url, options)
                 .then(function () {
+                    console.log(options)
                     alert("Registro grabado")
                     window.location.href = "./cursos.html";
                 })
                 .catch(err => {
+                    console.log(options)
                     console.error(err);
                     alert("Error al Grabarr")
                 })
