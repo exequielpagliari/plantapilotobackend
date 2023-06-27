@@ -57,8 +57,9 @@ p {
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   margin: 1rem 3rem;
+  align-content: center;
   }
 
   /* Diseño de cards individuales*/
@@ -67,7 +68,7 @@ p {
   background-color: #f1f1f1;
   min-width: 250px;
   max-width: 500px;
-  margin: 10px auto;
+  margin: 1rem;
   padding: 0px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
   transition: 0.3s;
