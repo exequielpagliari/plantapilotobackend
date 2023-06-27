@@ -78,7 +78,8 @@ p {
  .card img {
     display: block;
     border: 0;
-    width: 100%;
+    min-width: 100%;
+    max-width: 10rem;
     height: auto;
     border-radius: 0.5rem 0.5rem 0 0;
   }

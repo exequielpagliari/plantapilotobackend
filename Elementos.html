@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <section id="app" class="flex-container" >
-        <ul v-for="curso in cursos">
+    <section id="app1" class="flex-container" >
+        <section v-for="curso in cursos">
             <a :href="'./docs/' + curso.link">
             <article class="card">
                 
@@ -24,7 +24,7 @@
                 
                 <h5 id="h5">{{curso.nombre}}</h5>
             </a>
-        </ul>
+        </section>
 
 
         <!-- 

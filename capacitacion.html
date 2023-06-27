@@ -75,8 +75,20 @@
 
     <h2 id="h2">Catálogo de cursos</h2>
 
-    <section class="flex-container">
-
+    <section id="app1" class="flex-container" >
+    <section v-for="curso in cursos">
+        <a id="link" :href="'./docs/' + curso.link">
+        <article class="card">
+            <article class="ribbon-container">
+                <span id="ribbon-finalizado">{{curso.estado}}</span>
+            </article>
+            <img v-bind:src="'./img/' + curso.imagen" /> 
+            <h5 id="h5">{{curso.nombre}}</h5>
+        
+      
+    </a>
+    </section>
+<!--
       <a id="link" href="./docs/intro-posco.pdf" , target="_blank">
         <article class="card">
           <article class="ribbon-container">
@@ -127,7 +139,7 @@
           <h5>Almacenamiento en silobolsa</h5>
       </a>
       </article>
-
+-->
     </section>
 
 
