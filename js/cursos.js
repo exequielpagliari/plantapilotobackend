@@ -23,7 +23,7 @@ const app1 = Vue.createApp({
                 .then(response => response.json())
                 .then(data => {
                     this.cursos = data;
-                    console.log(data)
+                    /*console.log(data)*/
                     
                 })
                 .catch(err => {
@@ -59,7 +59,7 @@ const app1 = Vue.createApp({
             }
             fetch(this.url, options)
                 .then(function () {
-                    console.log(options)
+                    /*console.log(options)*/
                     alert("Registro grabado")
                     window.location.href = "./cursos.html";
                 })
