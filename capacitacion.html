@@ -75,20 +75,33 @@
 
     <h2 id="h2">Catálogo de cursos</h2>
 
-    <section id="app1" class="flex-container" >
-    <section v-for="curso in cursos">
-        <a id="link" :href="'./docs/' + curso.link">
-        <article class="card">
-            <article class="ribbon-container">
-                <span id="ribbon-finalizado">{{curso.estado}}</span>
-            </article>
-            <img v-bind:src="'./img/' + curso.imagen" /> 
-            <h5 id="h5">{{curso.nombre}}</h5>
-            <h6 id="h6">Inicia el {{curso.fechaInicio}} <br> Finaliza el {{curso.fechaFinalizacion}}</h5>
-      
-    </a>
-    </section>
-<!--
+
+
+    <section id="app1" class="flex-container">
+      <div v-if="error">
+        <p>Lo sentimos , ........</p>
+      </div>
+      <div v-else>
+        <section v-if="cargando">
+          <div class="spinner-border"></div>
+          <p>Cargando .....</p>
+        </section>
+        <section  class="flex-container" v-else>
+          <section v-for="curso in cursos">
+            <a id="link" :href="curso.link">
+              <article class="card">
+                <article class="ribbon-container">
+                  <span id="ribbon-finalizado">{{curso.estado}}</span>
+                </article>
+                <img v-bind:src="curso.imagen" />
+                <h5 id="h5">{{curso.nombre}}</h5>
+                <h6 id="h6">Inicia el {{curso.fechaInicio}} <br> Finaliza el {{curso.fechaFinalizacion}}</h5>
+
+            </a>
+          </section>
+        </section>
+      </div>
+      <!--
       <a id="link" href="./docs/intro-posco.pdf" , target="_blank">
         <article class="card">
           <article class="ribbon-container">

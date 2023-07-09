@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/capacitacion.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header><nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container">
+        <a id="logo-progranos" href="./index.html"><img src="./img/progranos-cuadrado-transp.png" alt="" style="display: inline-block; width: 60px; height: 60px;"></a>
+        <!--<a class="navbar-brand" href="index.html">Gestión de Cursos</a>-->
+        <!--<button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> </button>-->
+        
+        <!--<div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+        <a class="nav-link active" href="index.html" aria-current="page">Home <span> class="visually-hidden">(current)</span></a>
+        </li>-->
+        <!--<li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+        </li>-->
+        <ul class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRUD</a><div class="dropdown-menu" aria-labelledby="dropdownId">
+        <a class="dropdown-item" href="cursos.html">Cursos</a>
+        <a class="dropdown-item" href="#">Otros</a>
+        </div>
+        </li>
+        </ul>
+        <form class="d-flex my-2 my-lg-0">
+        <input class="form-control me-sm-2" type="text" placeholder="Buscar">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+        </div>
+        </div>
+        </nav></header>
+    <section id="app1" class="flex-container" >
+        <section v-for="curso in cursos">
+            <a :href="'./docs/' + curso.link">
+            <article class="card">
+                
+
+
+
+                <article class="ribbon-container">
+                    <span id="ribbon-finalizado">{{curso.estado}}</span>
+                </article>
+                <img v-bind:src="'./img/' + curso.imagen" /> 
+                
+                <h5 id="h5">{{curso.nombre}}</h5>
+                <h6 id="h5">Inicia el {{curso.fechaInicio}} - Finaliza el {{curso.fechaFinalizacion}}</h5>
+
+            </a>
+        </section>
+
+        
+
+
+        <!-- 
+        <ul v-for="curso in cursos">
+            <article class="card">
+
+                <article class="ribbon-container">
+                    <span id="ribbon-finalizado">{{estado}}</span>
+                </article>
+                <img v-bind:src="'./img/' + imagen" /> 
+    
+                <h5 id="h5">{{curso}}</h5>
+            {{ imagen }}    
+        </ul>
+         -->
+        
+        
+
+
+        </article>
+
+    </section>
+
+   
+
+    <!---
+                <article class="card">
+            <a id="link" href="./docs/intro-posco.pdf" , target="_blank">
+                <article class="card">
+                    <article class="ribbon-container">
+                        <span id="ribbon-finalizado">Finalizado</span>
+                    </article>
+                    <img src="./img/introposco.png" alt="Intro a la poscosecha">
+                    <h5 id="h5">Introducción a la poscosecha</h5>
+            </a>
+        </article>
+    -->
+</body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="./js/cursos.js"></script>
+
+</html>
